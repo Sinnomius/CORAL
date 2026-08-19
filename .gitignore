@@ -39,9 +39,3 @@ Thumbs.db
 # MATLAB crash dumps
 matlab_crash_dump.*
 java.log.*
-
-# Generated benchmark outputs
-CORAL_benchmark_runs_fixed.csv
-CORAL_topology_frequencies_fixed.csv
-CORAL_reference_topologies_fixed.csv
-CORAL_ablation_summary_fixed.csv
