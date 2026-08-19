@@ -1,0 +1,47 @@
+# MATLAB autosave / backup files
+*.asv
+*.m~
+*.autosave
+
+# MATLAB generated files
+*.mex*
+*.p
+*.slxc
+*.sldd
+*.slxc
+*.slxc
+*.slx.r*
+*.mdl.r*
+
+# Simulink / code generation folders
+slprj/
+codegen/
+
+# MATLAB cache / project metadata
+*.prj
+*.matlab
+resources/project/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE metadata
+.vscode/
+.idea/
+
+# MATLAB crash dumps
+matlab_crash_dump.*
+java.log.*
+
+# Generated benchmark outputs
+CORAL_benchmark_runs_fixed.csv
+CORAL_topology_frequencies_fixed.csv
+CORAL_reference_topologies_fixed.csv
+CORAL_ablation_summary_fixed.csv
