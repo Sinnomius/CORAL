@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use CORAL in your research, please cite this software and the associated publication."
+title: "CORAL: Coral reef Optimization for Adaptive Layouts"
+type: software
+authors:
+  - family-names: "Zondervan"
+    given-names: "Edwin"
+
+version: 1.0.0
+date-released: 2026-08-19
+
+abstract: >-
+  CORAL is a topology-aware coral-reef-inspired optimization algorithm
+  for mixed-integer chemical process superstructure optimization. It
+  combines structural exploration, feasibility-first settlement,
+  adaptive search operators, diversity preservation, bleaching and
+  recolonization, and optional local nonlinear-programming refinement.
+
+keywords:
+  - optimization
+  - process systems engineering
+  - process synthesis
+  - superstructure optimization
+  - mixed-integer nonlinear programming
+  - metaheuristics
+  - coral reef optimization
+  - MATLAB
+
+license: MIT
