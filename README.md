@@ -361,6 +361,11 @@ The Netherlands
 
 ---
 
+## Project links
+
+- 🌐 [CORAL project website](https://sinnomius.github.io/CORAL/)
+- 💻 [Source code and releases](https://github.com/sinnomius/CORAL)
+
 ## Disclaimer
 
 CORAL is research software. It is provided for scientific and educational use and comes without warranty. Results should be independently verified before the software is used for engineering design or decision-making.
