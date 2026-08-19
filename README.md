@@ -1,6 +1,6 @@
-![CORAL graphical abstract](figures/CORAL_graphical_abstract.png)
-
 # CORAL
+
+![CORAL graphical abstract](figures/CORAL_graphical_abstract.png)
 
 **Coral reef Optimization for Adaptive Layouts**
 
