@@ -334,7 +334,9 @@ These figures correspond to the computational data contained in the `data/` dire
 
 CORAL can record and visualize the evolution of the optimization reef during a run.
 
-▶️ **[Watch the CORAL reef evolve](media/CORAL_reef_growth.mp4)**
+![CORAL reef evolution](media/CORAL_reef_growth.gif)
+
+▶️ **[Watch the full-resolution CORAL reef animation (MP4)](media/CORAL_reef_growth.mp4)**
 
 In the animation, the optimization population is represented as an evolving reef:
 
