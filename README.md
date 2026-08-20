@@ -182,7 +182,8 @@ CORAL/
 │
 ├── examples/
 │   ├── simple_process_superstructure.m
-│   └── example_CORAL_superstructure.m
+│   ├── example_CORAL_superstructure.m
+│   └── example_CORAL_reef_animation.m
 │
 ├── benchmarks/
 │   ├── exhaustive_superstructure_reference_fixed.m
@@ -197,6 +198,13 @@ CORAL/
 │
 ├── figures/
 │   └── manuscript and benchmark figures
+│
+├── visualization/
+│   ├── animate_CORAL_reef.m
+│   └── CORALSuperstructureOptimizerViz.m
+│
+├── media/
+│   └── CORAL_reef_growth.mp4
 │
 ├── docs/
 │
@@ -233,6 +241,7 @@ In MATLAB, navigate to the CORAL repository and add the relevant folders to the 
 addpath('src')
 addpath('examples')
 addpath('benchmarks')
+addpath('visualization')
 ```
 
 ### Run the illustrative example
@@ -259,6 +268,31 @@ benchmark_CORAL_superstructure_fixed
 benchmark_CORAL_ablation_fixed
 ```
 
+### Run the reef-evolution animation
+
+```matlab
+example_CORAL_reef_animation
+```
+
+The visualization example records the reef state and biological events during optimization.
+
+To replay the recorded reef:
+
+```matlab
+animate_CORAL_reef(result)
+```
+
+To export the animation as an MP4:
+
+```matlab
+animate_CORAL_reef(result, ...
+    'FramePause',0.10, ...
+    'FrameStep',1, ...
+    'ShowEvents',true, ...
+    'SaveVideo',true, ...
+    'VideoFile','CORAL_reef_growth.mp4');
+```
+
 The benchmark scripts generate CSV files containing the computational results.
 
 ---
@@ -273,7 +307,9 @@ The repository contains:
 - repeated stochastic benchmark scripts;
 - the ablation study;
 - raw benchmark results;
-- manuscript figures.
+- manuscript figures;
+- reef-history recording and visualization tools;
+- an example reef-evolution animation.
 
 Random seeds are explicitly specified in the benchmark scripts to support reproducibility.
 
@@ -291,6 +327,44 @@ The `figures/` directory contains the figures used to analyze CORAL, including:
 - ablation-study performance.
 
 These figures correspond to the computational data contained in the `data/` directory.
+
+---
+
+## Watch CORAL evolve
+
+CORAL can record and visualize the evolution of the optimization reef during a run.
+
+▶️ **[Watch the CORAL reef evolve](media/CORAL_reef_growth.mp4)**
+
+In the animation, the optimization population is represented as an evolving reef:
+
+- **Each coral** represents one candidate process design.
+- **Color** represents process topology — effectively a different coral *species* within the process superstructure.
+- **Marker size** represents solution quality; larger corals correspond to better-performing solutions.
+- **Filled markers** represent feasible process designs.
+- **Open markers** represent infeasible process designs.
+- **Green rings** indicate newly settled larvae or budding events.
+- **Red crosses** indicate depredation or bleaching events.
+
+As the iterations proceed, alternative process topologies compete for space. Successful structures can spread through the reef, weaker candidates disappear, and diversity-preserving disturbances can create space for recolonization.
+
+The animation therefore provides a visual correspondence between:
+
+```text
+ecological evolution of the reef
+              ↕
+mathematical search of the process superstructure
+```
+
+The visualization is generated using:
+
+```text
+visualization/animate_CORAL_reef.m
+visualization/CORALSuperstructureOptimizerViz.m
+examples/example_CORAL_reef_animation.m
+```
+
+Reef-history recording is optional so that the standard optimizer can be used without the additional memory required to store every population snapshot.
 
 ---
 
